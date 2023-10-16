@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 700;
+
+  src: url("assets/fonts/poppins-bold-webfont.woff2") format("woff2"),
+    url("assets/fonts/poppins-bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-style: italic;
+  font-weight: 700;
+
+  src: url("assets/fonts/poppins-bolditalic-webfont.woff2") format("woff2"),
+    url("assets/fonts/poppins-bolditalic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 800;
+
+  src: url("assets/fonts/poppins-extrabold-webfont.woff2") format("woff2"),
+    url("assets/fonts/poppins-extrabold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-style: italic;
+  font-weight: 800;
+
+  src: url("assets/fonts/poppins-extrabolditalic-webfont.woff2") format("woff2"),
+    url("assets/fonts/poppins-extrabolditalic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 400;
+
+  src: url("assets/fonts/poppins-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/poppins-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-style: italic;
+  font-weight: 400;
+
+  src: url("assets/fonts/poppins-italic-webfont.woff2") format("woff2"),
+    url("assets/fonts/poppins-italic-webfont.woff") format("woff");
+}
+
+:root {
+  --primary-clr-100: hsl(259, 100%, 65%);
+  --primary-clr-200: hsl(0, 100%, 67%);
+
+  --neutral-clr-0: hsl(0, 0%, 8%);
+  --neutral-clr-50: #f0f0f0;
+  --neutral-clr-100: hsl(0, 0%, 86%);
+  --neutral-clr-150: hsl(0, 1%, 44%);
+  --neutral-clr-200: hsl(0, 0%, 100%);
+  --neutral-clr-250: hsl(0, 0%, 94%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--neutral-clr-50);
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+}
+
+header {
+  color: var(--primary-clr-100);
+  font-size: 2em;
+  font-style: italic;
+  font-weight: 800;
+  padding-block: 10px;
+  text-align: center;
+}
+
+.container {
+  background: var(--neutral-clr-200);
+  margin-inline: auto;
+  padding: 2rem;
+  width: 375px;
+}
+.inputs-container {
+  padding: 1em;
+}
+.seperator-container {
+  padding-block: 2.5rem;
+}
+.seperator {
+  position: relative;
+  border-top: 1px solid #000;
+}
+img {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  background: var(--primary-clr-100);
+  padding: 1rem;
+  scale: 0.7;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--primary-clr-100);
+}
