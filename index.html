@@ -18,20 +18,34 @@
     <header>What’s your Age?</header>
     <main>
       <div class="container">
-        <div class="inputs-container">
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-        </div>
-        <div class="seperator-container">
-          <div class="seperator">
-            <img src="assets/images/icon-arrow.svg" alt="arrow-icon" />
+        <form action="#">
+          <div class="inputs-container">
+            <div class="input">
+              <p class="label">DAY</p>
+              <input type="text" name="day" placeholder="DD" min="1" />
+              <p class="error error-message">Must be a valid day</p>
+            </div>
+            <div class="input">
+              <p class="label">MONTH</p>
+              <input type="text" name="month" placeholder="MM" min="1" />
+              <p class="error error-message">Must be a valid month</p>
+            </div>
+            <div class="input">
+              <p class="label">YEAR</p>
+              <input type="text" name="year" placeholder="YYYY" min="1" />
+              <p class="error error-message">Must be a valid year</p>
+            </div>
           </div>
-        </div>
+          <div class="seperator-container">
+            <div class="seperator">
+              <img src="assets/images/icon-arrow.svg" alt="arrow-icon" />
+            </div>
+          </div>
+        </form>
         <div class="age-container">
-          <span class="years">-- years</span>
-          <span class="months">-- months</span>
-          <span class="years">-- days</span>
+          <p class="years"><span id="years">--</span> years</p>
+          <p class="months"><span id="months">--</span> months</p>
+          <p class="years"><span id="days">--</span> days</p>
         </div>
       </div>
     </main>
@@ -40,7 +54,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Jayvan Andel</a>.
     </div>
   </body>
 </html>

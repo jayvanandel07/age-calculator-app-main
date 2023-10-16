@@ -68,11 +68,15 @@
   margin: 0;
   padding: 0;
 }
-
+input {
+  border: none;
+  outline: none;
+}
 body {
   background: var(--neutral-clr-50);
   font-family: "poppins", sans-serif;
   font-size: 16px;
+  font-weight: 400;
 }
 
 header {
@@ -80,40 +84,125 @@ header {
   font-size: 2em;
   font-style: italic;
   font-weight: 800;
-  padding-block: 10px;
+  padding-block: 2rem;
   text-align: center;
 }
-
 .container {
   background: var(--neutral-clr-200);
+  border-radius: 10px;
+  border-bottom-right-radius: 25%;
+  box-shadow: 1px 1px 10px 1px rgba(186, 186, 186, 0.4);
+  color: var(--neutral-clr-0);
   margin-inline: auto;
-  padding: 2rem;
-  width: 375px;
+  padding: 1.5rem 1rem;
+  width: 275px;
+}
+.inputs-container,
+.age-container {
+  padding: 1rem 5px;
+}
+.age-container,
+.input {
+  display: flex;
+  flex-direction: column;
 }
 .inputs-container {
-  padding: 1em;
+  column-gap: 20px;
+  display: grid;
+  font-weight: bold;
+  grid-template-columns: repeat(3, 1fr);
 }
+
+.input > * {
+  margin-bottom: 0.5rem;
+}
+.input .label {
+  color: var(--neutral-clr-150);
+  font-size: 0.6em;
+  letter-spacing: 3px;
+}
+.input input {
+  border: 1px solid var(--neutral-clr-100);
+  border-radius: 7px;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-weight: 800;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.input input:focus {
+  border-color: var(--primary-clr-100);
+}
+.input input.error {
+  border-color: var(--primary-clr-200);
+}
+p.error {
+  color: var(--primary-clr-200);
+}
+p.error-message {
+  font-size: 0.4em;
+  font-weight: 400;
+}
+
 .seperator-container {
-  padding-block: 2.5rem;
+  padding-block: 2rem;
 }
 .seperator {
+  border-top: 2px solid var(--neutral-clr-100);
+  width: 100%;
+  height: 0;
   position: relative;
-  border-top: 1px solid #000;
 }
 img {
-  inset: 0;
-  margin: auto;
   position: absolute;
   background: var(--primary-clr-100);
+  border-radius: 50%;
+  inset: 0;
+  margin: auto;
   padding: 1rem;
-  scale: 0.7;
+  width: 1.5em;
+}
+
+.age-container {
+  font-weight: 800;
+  font-size: 2em;
+  color: var(--neutral-clr-0);
+  font-style: italic;
+}
+.age-container p > span {
+  color: var(--primary-clr-100);
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.5em;
   text-align: center;
+  margin-block: 1rem;
 }
 
 .attribution a {
   color: var(--primary-clr-100);
+}
+
+@media (min-width: 720px) {
+  body {
+    font-size: 24px;
+  }
+  .container {
+    width: 475px;
+    padding: 2rem;
+  }
+  .inputs-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .seperator-container {
+    padding-block: 1.5rem;
+  }
+  img {
+    inset: initial;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
 }
