@@ -18,34 +18,39 @@
     <header>What’s your Age?</header>
     <main>
       <div class="container">
-        <form action="#">
+        <form action="#" id="formId">
           <div class="inputs-container">
             <div class="input">
               <p class="label">DAY</p>
-              <input type="text" name="day" placeholder="DD" min="1" />
-              <p class="error error-message">Must be a valid day</p>
+              <input type="text" id="day" placeholder="DD" min="1" />
+              <p class="error error-message"></p>
             </div>
             <div class="input">
               <p class="label">MONTH</p>
-              <input type="text" name="month" placeholder="MM" min="1" />
-              <p class="error error-message">Must be a valid month</p>
+              <input type="text" id="month" placeholder="MM" min="1" />
+              <p class="error error-message"></p>
             </div>
             <div class="input">
               <p class="label">YEAR</p>
-              <input type="text" name="year" placeholder="YYYY" min="1" />
-              <p class="error error-message">Must be a valid year</p>
+              <input type="text" id="year" placeholder="YYYY" min="1" />
+              <p class="error error-message"></p>
             </div>
           </div>
           <div class="seperator-container">
             <div class="seperator">
-              <img src="assets/images/icon-arrow.svg" alt="arrow-icon" />
+              <img
+                id="submitButton"
+                src="assets/images/icon-arrow.svg"
+                alt="arrow-icon"
+                onclick="onSubmit()"
+              />
             </div>
           </div>
         </form>
         <div class="age-container">
-          <p class="years"><span id="years">--</span> years</p>
-          <p class="months"><span id="months">--</span> months</p>
-          <p class="years"><span id="days">--</span> days</p>
+          <p class="years"><span id="yearsHolder">--</span> years</p>
+          <p class="months"><span id="monthsHolder">--</span> months</p>
+          <p class="years"><span id="daysHolder">--</span> days</p>
         </div>
       </div>
     </main>
@@ -56,5 +61,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Jayvan Andel</a>.
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
